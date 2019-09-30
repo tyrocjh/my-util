@@ -23,9 +23,7 @@ npm publish // 发布
 
 ```
 <script type="text/javascript" src="util.js"></script>
-```
 
-```
 tUtil.array
 tUtil.cookie
 ```
@@ -41,7 +39,6 @@ npm install tyro-util --save-dev
 2. import工具类：
 
 ```
-require('lodash')
 import myUtil from 'tyro-util'
 
 myUtil.array
