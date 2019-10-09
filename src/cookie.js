@@ -1,5 +1,5 @@
 /**
- * @desc 根据name读取cookie
+ * @desc   根据name读取cookie
  * @param  {String} name
  * @return {String}
  */
@@ -27,8 +27,8 @@ function setCookie(name, value, days) {
 }
 
 /**
- * @desc 根据name删除cookie
- * @param  {String} name
+ * @desc  根据name删除cookie
+ * @param {String} name
  */
 function removeCookie(name) {
     // 设置已过期，系统会立刻删除cookie
