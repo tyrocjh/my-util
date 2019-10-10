@@ -66,6 +66,7 @@ function getOS() {
 }
 
 export default {
+    getVersion,
     getExplore,
     getOS
 }

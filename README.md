@@ -8,8 +8,65 @@
 
 ## API文档
 
+### [regex][regex]
+#### &emsp;&emsp; isEmail &emsp;&emsp;判断是否为邮箱地址
+#### &emsp;&emsp; isPhoneNum &emsp;&emsp;判断是否为手机号
+#### &emsp;&emsp; isIdCard &emsp;&emsp;判断是否为身份证号
+#### &emsp;&emsp; isUrl &emsp;&emsp;判断是否为URL地址
+#### &emsp;&emsp; isValidPwd &emsp;&emsp;判断密码格式是否6-25字符必须包含大小写字母+数字
+#### &emsp;&emsp; isColor &emsp;&emsp;判断是否为16进制颜色，rgb 或 rgba
+
+### [url][url]
+#### &emsp;&emsp; getQueryString &emsp;&emsp;获取url参数值
+#### &emsp;&emsp; parseQueryToObj &emsp;&emsp;url参数转对象
+
+### [time][time]
+#### &emsp;&emsp; timeLeft &emsp;&emsp;剩余时间
+#### &emsp;&emsp; formatPassTime &emsp;&emsp;距现在的已过时间
+#### &emsp;&emsp; formatRemainTime &emsp;&emsp;现在距${endTime}的剩余时间
+#### &emsp;&emsp; isSameDay &emsp;&emsp;判断是否为同一天
+#### &emsp;&emsp; isLeapYear &emsp;&emsp;是否为闰年
+
 ### [array][array]
 #### &emsp;&emsp; arrayEqual &emsp;&emsp;判断两个数组是否相等
+
+### [cookie][cookie]
+#### &emsp;&emsp; getCookie &emsp;&emsp;根据name读取cookie
+#### &emsp;&emsp; setCookie &emsp;&emsp;设置Cookie
+#### &emsp;&emsp; removeCookie &emsp;&emsp;根据name删除cookie
+
+### [clazz][clazz]
+#### &emsp;&emsp; hasClass &emsp;&emsp;判断元素是否有某个class
+#### &emsp;&emsp; addClass &emsp;&emsp;为元素添加class
+#### &emsp;&emsp; removeClass &emsp;&emsp;为元素移除class
+
+### [dom][dom]
+#### &emsp;&emsp; getRect &emsp;&emsp;获取节点对象的上下左右边距及宽高
+#### &emsp;&emsp; offset &emsp;&emsp;获取一个元素的距离文档(document)的位置，类似jQ中的offset()
+#### &emsp;&emsp; getScrollTop &emsp;&emsp;获取滚动条距顶部的距离
+#### &emsp;&emsp; setScrollTop &emsp;&emsp;设置滚动条距顶部的距离
+#### &emsp;&emsp; scrollTo &emsp;&emsp;在${duration}时间内，滚动条平滑滚动到${to}指定位置
+#### &emsp;&emsp; windowResize &emsp;&emsp;H5软键盘缩回、弹起回调
+
+### [object][object]
+#### &emsp;&emsp; isEmptyObject &emsp;&emsp;判断obj是否为空
+#### &emsp;&emsp; deepClone &emsp;&emsp;深拷贝，支持常见类型
+
+### [func][func]
+#### &emsp;&emsp; throttle &emsp;&emsp;函数节流
+#### &emsp;&emsp; debounce &emsp;&emsp;函数防抖
+
+### [random][random]
+#### &emsp;&emsp; randomNum &emsp;&emsp;生成指定范围[min, max]的随机数
+#### &emsp;&emsp; randomColor &emsp;&emsp;随机生成颜色
+
+### [device][device]
+#### &emsp;&emsp; getVersion &emsp;&emsp;判断是否xx浏览器
+#### &emsp;&emsp; getExplore &emsp;&emsp;获取浏览器类型和版本
+#### &emsp;&emsp; getOS &emsp;&emsp;获取操作系统类型
+
+### [money][money]
+#### &emsp;&emsp; numToCN &emsp;&emsp;数字现金转中文
 
 ## 发布到 npm
 
@@ -49,4 +106,15 @@ myUtil.array
 myUtil.array
 ```
 
+[regex]:https://github.com/tyrocjh/my-util/blob/master/src/regex.js
+[url]:https://github.com/tyrocjh/my-util/blob/master/src/url.js
+[time]:https://github.com/tyrocjh/my-util/blob/master/src/time.js
 [array]:https://github.com/tyrocjh/my-util/blob/master/src/array.js
+[cookie]:https://github.com/tyrocjh/my-util/blob/master/src/cookie.js
+[clazz]:https://github.com/tyrocjh/my-util/blob/master/src/clazz.js
+[dom]:https://github.com/tyrocjh/my-util/blob/master/src/dom.js
+[object]:https://github.com/tyrocjh/my-util/blob/master/src/object.js
+[func]:https://github.com/tyrocjh/my-util/blob/master/src/func.js
+[random]:https://github.com/tyrocjh/my-util/blob/master/src/random.js
+[device]:https://github.com/tyrocjh/my-util/blob/master/src/device.js
+[money]:https://github.com/tyrocjh/my-util/blob/master/src/money.js

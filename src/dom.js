@@ -113,6 +113,7 @@ function windowResize(downCb, upCb) {
 }
 
 export default {
+    getRect,
     offset,
     getScrollTop,
     setScrollTop,

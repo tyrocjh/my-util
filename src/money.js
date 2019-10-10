@@ -1,5 +1,5 @@
 /**
- * @desc   现金额转大写
+ * @desc   数字现金转中文
  * @param  {Number} n 
  * @return {String}
  */

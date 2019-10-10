@@ -1,5 +1,5 @@
 /**
- * @desc   判断`obj`是否为空
+ * @desc   判断obj是否为空
  * @param  {Object} obj
  * @return {Boolean}
  */
