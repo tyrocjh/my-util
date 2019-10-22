@@ -1,4 +1,27 @@
 /**
+ * @desc    当前日期天数
+ * @param   {Date} date
+ * @returns {Number}
+ *
+ * eg.
+ * dayOfYear(new Date()); // 295
+ */
+const dayOfYear = date =>
+  Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+
+/**
+ * @desc    返回日期间的天数
+ * @param   {Date} dateInitial
+ * @param   {Date} dateFinal
+ * @returns {Number}
+ *
+ * eg.
+ * getDaysDiffBetweenDates(new Date('2019-01-01'), new Date('2019-10-14')); // 286
+ */
+const getDaysDiffBetweenDates = (dateInitial, dateFinal) =>
+  (dateFinal - dateInitial) / (1000 * 3600 * 24);
+
+/**
  * @desc    ${startTime - endTime}的剩余时间，startTime大于endTime时，均返回0
  * @param   { Date | String } startTime
  * @param   { Date | String } endTime
@@ -109,6 +132,8 @@ function isLeapYear(year) {
 }
 
 export default {
+    dayOfYear,
+    getDaysDiffBetweenDates,
     timeLeft,
     formatPassTime,
     formatRemainTime,

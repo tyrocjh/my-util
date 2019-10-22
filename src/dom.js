@@ -1,4 +1,36 @@
 /**
+ * @desc  校验指定元素是否有指定类
+ * @param {ele} 指定元素
+ * @param {String} 指定类名
+ * @return {Boolean}
+ *
+ * eg.
+ * hasClass(document.querySelector('p.special'), 'special'); // true
+ */
+const hasClass = (el, className) => el.classList.contains(className);
+
+/**
+ * @desc  检查是否包含子元素
+ * @return {Boolean}
+ *
+ * eg.
+ * elementContains(document.querySelector('head'), document.querySelector('title')); // true
+ * elementContains(document.querySelector('body'), document.querySelector('body')); // false
+ */
+const elementContains = (parent, child) => parent !== child && parent.contains(child);
+
+/**
+ * @desc  检查页面底部是否可见
+ * @return {Boolean}
+ *
+ * eg.
+ * bottomVisible(); // true
+ */
+const bottomVisible = () =>
+  document.documentElement.clientHeight + window.scrollY >=
+  (document.documentElement.scrollHeight || document.documentElement.clientHeight);
+
+/**
  * 获取节点对象的上下左右边距及宽高
  * @param {Dom-Object} element 需要获取相应信息的dom节点对象
  * 示例
@@ -113,6 +145,9 @@ function windowResize(downCb, upCb) {
 }
 
 export default {
+    hasClass,
+    elementContains,
+    bottomVisible,
     getRect,
     offset,
     getScrollTop,

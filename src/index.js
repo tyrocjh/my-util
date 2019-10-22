@@ -2,6 +2,7 @@ import regex from './regex.js';
 import url from './url.js';
 import time from './time.js';
 import array from './array.js';
+import str from './str.js';
 import cookie from './cookie.js';
 import clazz from './clazz.js';
 import dom from './dom.js';
@@ -16,6 +17,7 @@ export default {
 	url,
 	time,
     array,
+    str,
     cookie,
     clazz,
     dom,

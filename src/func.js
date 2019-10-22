@@ -103,7 +103,39 @@ function debounce(delay, atBegin, callback) {
     return callback === undefined ? throttle(delay, atBegin, false) : throttle(delay, callback, atBegin !== false);
 };
 
+/**
+ * @description 只会调用一次的函数
+ * @param {Function} fn
+ * @return {Function}
+ */
+const once = fn => {
+  let called = false
+  return function () {
+    if (!called) {
+      called = true
+      fn.apply(this, arguments)
+    }
+  }
+};
+
+/**
+ * @description 计算函数执行时间
+ * @param {Function} callback
+ * @return {Number}
+ *
+ * eg.
+ * timeTaken(() => Math.pow(2, 10)); // 1024, (logged): timeTaken: 0.02099609375ms
+ */
+const timeTaken = callback => {
+  console.time('timeTaken');
+  const r = callback();
+  console.timeEnd('timeTaken');
+  return r;
+};
+
 export default {
     throttle,
-    debounce
+    debounce,
+    once,
+    timeTaken
 }

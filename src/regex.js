@@ -52,11 +52,32 @@ function isColor(str) {
 	return /^(#([0-9a-fA-F]{3}){1,2}|[rR][gG][Bb](\((\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*,){2}\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*\)|[Aa]\((\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*,){3}\s*([01]|0\.\d+)\s*\)))$/.test(str);
 }
 
+/**
+ * @desc   转义HTML(防XSS攻击)
+ * @param  {String}  str
+ *
+ * eg.
+ * escapeHTML('<a href="#">Me & you</a>'); // '&lt;a href=&quot;#&quot;&gt;Me &amp; you&lt;/a&gt;'
+ */
+const escapeHTML = str =>
+  str.replace(
+    /[&<>'"]/g,
+    tag =>
+      ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+  );
+
 export default {
     isEmail,
     isPhoneNum,
     isIdCard,
     isUrl,
     isValidPwd,
-    isColor
+    isColor,
+    escapeHTML
 }

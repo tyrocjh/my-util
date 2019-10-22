@@ -1,12 +1,24 @@
 /**
- * @desc   生成指定范围[min, max]的随机数
- * @param  {Number} min 
- * @param  {Number} max 
- * @return {Number} 
+ * @desc   生成指定范围的随机整数
+ * @param  {Number} min
+ * @param  {Number} max
+ * @return {Number}
+ *
+ * eg.
+ * randomIntegerInRange(0, 5); // 3
  */
-function randomNum(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
+const randomIntegerInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+/**
+ * @desc   生成指定范围的随机小数
+ * @param  {Number} min
+ * @param  {Number} max
+ * @return {Number}
+ *
+ * eg.
+ * randomNumberInRange(2, 10); // 6.0211363285087005
+ */
+const randomNumberInRange = (min, max) => Math.random() * (max - min) + min;
 
 /**
  * @desc   随机生成颜色
@@ -17,6 +29,7 @@ function randomColor() {
 }
 
 export default {
-    randomNum,
+    randomIntegerInRange,
+    randomNumberInRange,
     randomColor
 }

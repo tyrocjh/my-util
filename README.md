@@ -15,20 +15,37 @@
 #### &emsp;&emsp; isUrl &emsp;&emsp;判断是否为URL地址
 #### &emsp;&emsp; isValidPwd &emsp;&emsp;判断密码格式是否6-25字符必须包含大小写字母+数字
 #### &emsp;&emsp; isColor &emsp;&emsp;判断是否为16进制颜色，rgb 或 rgba
+#### &emsp;&emsp; escapeHTML &emsp;&emsp;转义HTML
 
 ### [url][url]
 #### &emsp;&emsp; getQueryString &emsp;&emsp;获取url参数值
 #### &emsp;&emsp; parseQueryToObj &emsp;&emsp;url参数转对象
+#### &emsp;&emsp; httpsRedirect &emsp;&emsp;HTTP跳转HTTPS
 
 ### [time][time]
+#### &emsp;&emsp; dayOfYear &emsp;&emsp;当前日期天数
+#### &emsp;&emsp; getDaysDiffBetweenDates &emsp;&emsp;返回日期间的天数
 #### &emsp;&emsp; timeLeft &emsp;&emsp;剩余时间
 #### &emsp;&emsp; formatPassTime &emsp;&emsp;距现在的已过时间
 #### &emsp;&emsp; formatRemainTime &emsp;&emsp;现在距${endTime}的剩余时间
 #### &emsp;&emsp; isSameDay &emsp;&emsp;判断是否为同一天
 #### &emsp;&emsp; isLeapYear &emsp;&emsp;是否为闰年
 
+### [str][str]
+#### &emsp;&emsp; capitalize &emsp;&emsp;首字母大写
+#### &emsp;&emsp; capitalizeEveryWord &emsp;&emsp;每个单词首字母大写
+#### &emsp;&emsp; decapitalize &emsp;&emsp;首字母小写
+#### &emsp;&emsp; stripHTMLTags &emsp;&emsp;从字符串中删除HTML/XML标签
+#### &emsp;&emsp; byteSize &emsp;&emsp;返回字符串的字节长度
+
 ### [array][array]
 #### &emsp;&emsp; arrayEqual &emsp;&emsp;判断两个数组是否相等
+#### &emsp;&emsp; sample &emsp;&emsp;随机获取数组的某个值
+#### &emsp;&emsp; shuffle &emsp;&emsp;数组“洗牌”
+#### &emsp;&emsp; countOccurrences &emsp;&emsp;检测指定数值出现次数
+#### &emsp;&emsp; allEqual &emsp;&emsp;检查数组各项是否相等
+#### &emsp;&emsp; average &emsp;&emsp;取平均数
+#### &emsp;&emsp; intersection &emsp;&emsp;两数组的交集
 
 ### [cookie][cookie]
 #### &emsp;&emsp; getCookie &emsp;&emsp;根据name读取cookie
@@ -41,6 +58,9 @@
 #### &emsp;&emsp; removeClass &emsp;&emsp;为元素移除class
 
 ### [dom][dom]
+#### &emsp;&emsp; hasClass &emsp;&emsp;校验指定元素是否有指定类
+#### &emsp;&emsp; elementContains &emsp;&emsp;检查是否包含子元素
+#### &emsp;&emsp; bottomVisible &emsp;&emsp;检查页面底部是否可见
 #### &emsp;&emsp; getRect &emsp;&emsp;获取节点对象的上下左右边距及宽高
 #### &emsp;&emsp; offset &emsp;&emsp;获取一个元素的距离文档(document)的位置，类似jQ中的offset()
 #### &emsp;&emsp; getScrollTop &emsp;&emsp;获取滚动条距顶部的距离
@@ -49,15 +69,19 @@
 #### &emsp;&emsp; windowResize &emsp;&emsp;H5软键盘缩回、弹起回调
 
 ### [object][object]
+#### &emsp;&emsp; equals &emsp;&emsp;全等判断
 #### &emsp;&emsp; isEmptyObject &emsp;&emsp;判断obj是否为空
 #### &emsp;&emsp; deepClone &emsp;&emsp;深拷贝，支持常见类型
 
 ### [func][func]
 #### &emsp;&emsp; throttle &emsp;&emsp;函数节流
 #### &emsp;&emsp; debounce &emsp;&emsp;函数防抖
+#### &emsp;&emsp; once &emsp;&emsp;只会调用一次的函数
+#### &emsp;&emsp; timeTaken &emsp;&emsp;计算函数执行时间
 
 ### [random][random]
-#### &emsp;&emsp; randomNum &emsp;&emsp;生成指定范围[min, max]的随机数
+#### &emsp;&emsp; randomIntegerInRange &emsp;&emsp;生成指定范围的随机整数
+#### &emsp;&emsp; randomNumberInRange &emsp;&emsp;生成指定范围的随机小数
 #### &emsp;&emsp; randomColor &emsp;&emsp;随机生成颜色
 
 ### [device][device]
@@ -110,6 +134,7 @@ myUtil.array
 [url]:https://github.com/tyrocjh/my-util/blob/master/src/url.js
 [time]:https://github.com/tyrocjh/my-util/blob/master/src/time.js
 [array]:https://github.com/tyrocjh/my-util/blob/master/src/array.js
+[str]:https://github.com/tyrocjh/my-util/blob/master/src/str.js
 [cookie]:https://github.com/tyrocjh/my-util/blob/master/src/cookie.js
 [clazz]:https://github.com/tyrocjh/my-util/blob/master/src/clazz.js
 [dom]:https://github.com/tyrocjh/my-util/blob/master/src/dom.js
