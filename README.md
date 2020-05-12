@@ -69,6 +69,7 @@
 #### &emsp;&emsp; windowResize &emsp;&emsp;H5软键盘缩回、弹起回调
 
 ### [object][object]
+#### &emsp;&emsp; mergeObject &emsp;&emsp;合并对象
 #### &emsp;&emsp; equals &emsp;&emsp;全等判断
 #### &emsp;&emsp; isEmptyObject &emsp;&emsp;判断obj是否为空
 #### &emsp;&emsp; deepClone &emsp;&emsp;深拷贝，支持常见类型

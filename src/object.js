@@ -1,3 +1,27 @@
+function isObject(value) {
+  const type = typeof value
+  return value !== null && (type === 'object' || type === 'function')
+}
+
+/**
+ * @desc 合并对象
+ * @param source 源对象
+ * @param other 额外对象
+ * @returns {*}
+ */
+function mergeObject(source, other) {
+  if (!isObject(source) || !isObject(other)) {
+    return other === undefined ? source : other
+  }
+  return Object.keys({
+    ...source,
+    ...other
+  }).reduce((acc, key) => {
+    acc[key] = mergeObject(source[key], other[key])
+    return acc
+  }, Array.isArray(source) ? [] : {})
+}
+
 /**
  * @desc   全等判断(在两个变量之间进行深度比较以确定它们是否全等)
  * @param  {} a
@@ -68,6 +92,7 @@ function deepClone(values) {
 }
 
 export default {
+    mergeObject,
     equals,
     isEmptyObject,
     deepClone
