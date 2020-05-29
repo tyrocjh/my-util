@@ -1,3 +1,27 @@
+/*
+* 构造树形结构
+* @param {Array} data 需要处理的扁平数组
+* @param {String} pid 父级id
+* @return {Object}
+* */
+function toTreeData(data, pid) {
+  function tree(id) {
+    let arr = [];
+    data.filter(item => {
+      return item.parentId === id;
+    }).forEach(item => {
+      arr.push({
+        id: item.id,
+        name: item.name,
+        parentId: item.parentId,
+        children: tree(item.id)
+      });
+    })
+    return arr;
+  }
+  return tree(pid);
+}
+
 /**
  * @description 判断两个数组是否相等
  * @param {Array} arr1
@@ -89,6 +113,7 @@ const intersection = (a, b) => {
 };
 
 export default {
+  toTreeData,
 	arrayEqual,
 	sample,
 	shuffle,
