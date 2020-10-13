@@ -11,6 +11,7 @@ import func from './func.js';
 import random from './random.js';
 import device from './device.js';
 import money from './money.js';
+import html from './html.js';
 
 export default {
 	regex,
@@ -25,5 +26,6 @@ export default {
     func,
     random,
     device,
-    money
+    money,
+    html
 }

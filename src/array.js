@@ -99,6 +99,16 @@ const allEqual = arr => arr.every(val => val === arr[0]);
 const average = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.length;
 
 /**
+ * @description 数组总和
+ * @param {Array} arr
+ * @return {Number}
+ *
+ * eg.
+ * sum([1,2,3,4]); // 10
+ */
+const sum = arr => arr.reduce((acc, val) => acc + val, 0);
+
+/**
  * @description 两数组的交集
  * @param {Array} a
  * @param {Array} b
@@ -120,5 +130,6 @@ export default {
 	countOccurrences,
 	allEqual,
 	average,
+  sum,
 	intersection
 }

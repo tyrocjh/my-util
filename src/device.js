@@ -11,6 +11,7 @@ function getVersion() {
         android: !!ua.match(/Android*/i) , // 是否android浏览器
         webApp: !!ua.match(/Safari*/i), // 是否web应该程序，没有头部与底部
         weixin: !!ua.match(/MicroMessenger*/i), // 是否微信环境
+        alipay: !!ua.match(/alipay*/i), // 是否支付宝环境
         dd: !!ua.indexOf('dingtalk') > -1, // 是否钉钉浏览器
         uc: !!ua.match(/UCBrowser*/i), // 是否uc浏览器
         qq: !!ua.match(/MQQBrowser*/i), // 是否uc浏览器

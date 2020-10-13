@@ -32,11 +32,16 @@
 #### &emsp;&emsp; isLeapYear &emsp;&emsp;是否为闰年
 
 ### [str][str]
+#### &emsp;&emsp; isNumber &emsp;&emsp;判断是否数字
+#### &emsp;&emsp; fNumberWithComma &emsp;&emsp;数字每隔三位加一个逗号
+#### &emsp;&emsp; fNumber &emsp;&emsp;保留小数点后n位
 #### &emsp;&emsp; capitalize &emsp;&emsp;首字母大写
 #### &emsp;&emsp; capitalizeEveryWord &emsp;&emsp;每个单词首字母大写
+#### &emsp;&emsp; reverseString &emsp;&emsp;反转一个字符串
 #### &emsp;&emsp; decapitalize &emsp;&emsp;首字母小写
 #### &emsp;&emsp; stripHTMLTags &emsp;&emsp;从字符串中删除HTML/XML标签
 #### &emsp;&emsp; byteSize &emsp;&emsp;返回字符串的字节长度
+#### &emsp;&emsp; rgbToHex &emsp;&emsp;RGB转十六进制
 
 ### [array][array]
 #### &emsp;&emsp; toTreeData &emsp;&emsp;递归数组转为树形结构
@@ -46,6 +51,7 @@
 #### &emsp;&emsp; countOccurrences &emsp;&emsp;检测指定数值出现次数
 #### &emsp;&emsp; allEqual &emsp;&emsp;检查数组各项是否相等
 #### &emsp;&emsp; average &emsp;&emsp;取平均数
+#### &emsp;&emsp; sum &emsp;&emsp;数组总和
 #### &emsp;&emsp; intersection &emsp;&emsp;两数组的交集
 
 ### [cookie][cookie]
@@ -82,14 +88,22 @@
 #### &emsp;&emsp; timeTaken &emsp;&emsp;计算函数执行时间
 
 ### [random][random]
+#### &emsp;&emsp; uuid &emsp;&emsp;UUID生成器
 #### &emsp;&emsp; randomIntegerInRange &emsp;&emsp;生成指定范围的随机整数
 #### &emsp;&emsp; randomNumberInRange &emsp;&emsp;生成指定范围的随机小数
+#### &emsp;&emsp; shuffle &emsp;&emsp;随机化数组的顺序
 #### &emsp;&emsp; randomColor &emsp;&emsp;随机生成颜色
 
 ### [device][device]
 #### &emsp;&emsp; getVersion &emsp;&emsp;判断是否xx浏览器
 #### &emsp;&emsp; getExplore &emsp;&emsp;获取浏览器类型和版本
 #### &emsp;&emsp; getOS &emsp;&emsp;获取操作系统类型
+
+### [html][html]
+#### &emsp;&emsp; htmlEncode &emsp;&emsp;html转码
+#### &emsp;&emsp; htmlDecode &emsp;&emsp;html解码
+#### &emsp;&emsp; htmlEncodeByRegExp &emsp;&emsp;html正则转码
+#### &emsp;&emsp; htmlDecodeByRegExp &emsp;&emsp;html正则解码
 
 ### [money][money]
 #### &emsp;&emsp; numToCN &emsp;&emsp;数字现金转中文
@@ -126,10 +140,10 @@ npm install tyro-util --save-dev
 2. import工具类：
 
 ```
-import myUtil from 'tyro-util'
+import tUtil from 'tyro-util'
 
-myUtil.array
-myUtil.array
+tUtil.array
+tUtil.array
 ```
 
 [regex]:https://github.com/tyrocjh/my-util/blob/master/src/regex.js
@@ -144,4 +158,5 @@ myUtil.array
 [func]:https://github.com/tyrocjh/my-util/blob/master/src/func.js
 [random]:https://github.com/tyrocjh/my-util/blob/master/src/random.js
 [device]:https://github.com/tyrocjh/my-util/blob/master/src/device.js
+[html]:https://github.com/tyrocjh/my-util/blob/master/src/html.js
 [money]:https://github.com/tyrocjh/my-util/blob/master/src/money.js
