@@ -10,6 +10,24 @@
 const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n) && Number(n) == n;
 
 /**
+ * @description 补零
+ * @param {Number, Number} n, len
+ * @return {String}
+ *
+ * eg.
+ * leftPad(1, 3); // 001
+ */
+function leftPad(n, len) {
+    len = len || 2;
+    n = n + '';
+    let diff = len - n.length;
+    if (diff > 0) {
+        n = new Array(diff + 1).join('0') + n;
+    }
+    return n;
+}
+
+/**
  * @description 数字每隔三位加一个逗号
  * @param {String} num
  * @return {String}
@@ -21,8 +39,8 @@ function fNumberWithComma(num) {
     if (!/^(\+|-)?(\d+)(\.\d+)?$/.test(num)) {
         return num;
     }
-    var a = RegExp.$1, b = RegExp.$2, c = RegExp.$3;
-    var re = new RegExp("(\\d)(\\d{3})(,|$)");
+    let a = RegExp.$1, b = RegExp.$2, c = RegExp.$3;
+    let re = new RegExp("(\\d)(\\d{3})(,|$)");
     while (re.test(b))   b = b.replace(re, "$1,$2$3");
     return a + "" + b + "" + c;
 }
@@ -38,7 +56,7 @@ function fNumberWithComma(num) {
 function fNumber(s, n) {
     n = n > 0 && n <= 10 ? n : 2;
     s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";
-    var l = s.split(".")[0].split("").reverse(), r = s.split(".")[1];
+    let l = s.split(".")[0].split("").reverse(), r = s.split(".")[1];
     t = "";
     for (i = 0; i < l.length; i++) {
         t += l[i] + ((i + 1) % 3 === 0 && (i + 1) !== l.length ? "," : "");
@@ -124,6 +142,7 @@ const rgbToHex = (r, g, b) => ((r << 16) + (g << 8) + b).toString(16).padStart(6
 
 export default {
   isNumber,
+  leftPad,
   fNumberWithComma,
   fNumber,
   capitalize,

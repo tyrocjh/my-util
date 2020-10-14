@@ -1,4 +1,26 @@
 /*
+* 数组去重
+* @param {Array} arr 需要去重的数组
+* @return {Array}
+* */
+const unique = (arr) => {
+  let set = new Set(arr);
+  return Array.from(set);
+}
+
+/*
+* 数组扁平化
+* @param {Array} arr 需要扁平化的数组
+* @return {Array}
+* */
+const steamroller = (arr) => {
+  while(arr.some(item => Array.isArray(item))) {
+    arr = [].concat(...arr)
+  }
+  return arr
+}
+
+/*
 * 构造树形结构
 * @param {Array} data 需要处理的扁平数组
 * @param {String} pid 父级id
@@ -123,6 +145,8 @@ const intersection = (a, b) => {
 };
 
 export default {
+  unique,
+  steamroller,
   toTreeData,
 	arrayEqual,
 	sample,

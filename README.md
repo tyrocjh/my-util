@@ -33,6 +33,7 @@
 
 ### [str][str]
 #### &emsp;&emsp; isNumber &emsp;&emsp;判断是否数字
+#### &emsp;&emsp; leftPad &emsp;&emsp;补零
 #### &emsp;&emsp; fNumberWithComma &emsp;&emsp;数字每隔三位加一个逗号
 #### &emsp;&emsp; fNumber &emsp;&emsp;保留小数点后n位
 #### &emsp;&emsp; capitalize &emsp;&emsp;首字母大写
@@ -44,6 +45,8 @@
 #### &emsp;&emsp; rgbToHex &emsp;&emsp;RGB转十六进制
 
 ### [array][array]
+#### &emsp;&emsp; unique &emsp;&emsp;数组去重
+#### &emsp;&emsp; steamroller &emsp;&emsp;数组扁平化
 #### &emsp;&emsp; toTreeData &emsp;&emsp;递归数组转为树形结构
 #### &emsp;&emsp; arrayEqual &emsp;&emsp;判断两个数组是否相等
 #### &emsp;&emsp; sample &emsp;&emsp;随机获取数组的某个值
