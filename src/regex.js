@@ -53,6 +53,59 @@ function isColor(str) {
 }
 
 /**
+ * @desc 只能输入数字, 不符合字符的会替换为空
+ * @param {string} str - 参数str
+ * @return { string } - 替换后的字符
+ */
+function filterNum(str){
+    if(str){
+        str = str.replace(/[^\d]/g,"");
+        return str;
+    }
+    return str;
+}
+
+/**
+ * @desc 只能输入英文、中文和数字，不符合字符的会替换为空
+ * @param { string } str - 参数str
+ * @return { string } - 替换后的字符
+ */
+function filterCENum(str) {
+    if(str){
+        str = str.replace(/[^a-zA-Z\d\u4e00-\u9fa5]/g,"");
+        return str;
+    }
+    return str;
+}
+
+/**
+ * @desc 只能输入英文、和数字，不符合字符的会替换为空
+ * @param {string} str - 参数str
+ * @return { string } - 替换后的字符
+ */
+function filterENum(str){
+    if(str){
+        str = str.replace(/[^a-zA-Z\d]/g,"");
+        return str;
+    }
+    return str;
+}
+
+/**
+ * @desc 只能输入数字和一个小数点，不符合字符的会替换为空
+ * @param { string } str - 参数str
+ * @return { string } - 替换后的字符
+ */
+function filterFloate(str){
+    if(str){
+        str = str.replace(/[^\d.]/g,"");
+        str = str.replace(/(\.\d*)(\.\d*)/g,"$1");
+        return str;
+    }
+    return str;
+}
+
+/**
  * @desc   转义HTML(防XSS攻击)
  * @param  {String}  str
  *
@@ -79,5 +132,9 @@ export default {
     isUrl,
     isValidPwd,
     isColor,
+    filterNum,
+    filterCENum,
+    filterENum,
+    filterFloate,
     escapeHTML
 }

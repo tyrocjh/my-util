@@ -15,6 +15,10 @@
 #### &emsp;&emsp; isUrl &emsp;&emsp;判断是否为URL地址
 #### &emsp;&emsp; isValidPwd &emsp;&emsp;判断密码格式是否6-25字符必须包含大小写字母+数字
 #### &emsp;&emsp; isColor &emsp;&emsp;判断是否为16进制颜色，rgb 或 rgba
+#### &emsp;&emsp; filterNum &emsp;&emsp;只能输入数字, 不符合字符的会替换为空
+#### &emsp;&emsp; filterCENum &emsp;&emsp;只能输入英文、中文和数字，不符合字符的会替换为空
+#### &emsp;&emsp; filterENum &emsp;&emsp;只能输入英文、和数字，不符合字符的会替换为空
+#### &emsp;&emsp; filterFloate &emsp;&emsp;只能输入数字和一个小数点，不符合字符的会替换为空
 #### &emsp;&emsp; escapeHTML &emsp;&emsp;转义HTML
 
 ### [url][url]
