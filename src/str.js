@@ -1,4 +1,28 @@
 /**
+ * @desc 去空格
+ * @param { string } str - 需要去掉空格的字符串
+ * @param { string } pos - 去掉空格的位置
+ * @return { string } - 去掉空格后的字符
+ */
+export const trim = (str, pos = 'both') => {
+    if (pos == 'both') {
+        // 去除两端空格
+        return str.replace(/^\s+|\s+$/g, "");
+    } else if (pos == "left") {
+        // 去除左边空格
+        return str.replace(/^\s*/, '');
+    } else if (pos == 'right') {
+        // 去除右边空格
+        return str.replace(/(\s*$)/g, "");
+    } else if (pos == 'all') {
+        // 去除所有空格
+        return str.replace(/\s+/g, "");
+    } else {
+        return str;
+    }
+}
+
+/**
  * @description 判断是否数字
  *              使用!isNaN和parseFloat()来检查参数是否是一个数字，使用isFinite()来检查数字是否是有限的
  * @param {String} n
@@ -7,7 +31,7 @@
  * eg.
  * isNumber('10'); // true
  */
-const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n) && Number(n) == n;
+export const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n) && Number(n) == n;
 
 /**
  * @description 补零
@@ -17,7 +41,7 @@ const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n) && Number(n) == n;
  * eg.
  * leftPad(1, 3); // 001
  */
-function leftPad(n, len) {
+export const leftPad = (n, len) => {
     len = len || 2;
     n = n + '';
     let diff = len - n.length;
@@ -35,7 +59,7 @@ function leftPad(n, len) {
  * eg.
  * fNumberWithComma(1234567) -> "1,234,567"
  */
-function fNumberWithComma(num) {
+export const fNumberWithComma = (num) => {
     if (!/^(\+|-)?(\d+)(\.\d+)?$/.test(num)) {
         return num;
     }
@@ -53,7 +77,7 @@ function fNumberWithComma(num) {
  * eg.
  * fNumber(12.345, 2) -> "12.35"
  */
-function fNumber(s, n) {
+export const fNumber = (s, n) => {
     n = n > 0 && n <= 10 ? n : 2;
     s = parseFloat((s + "").replace(/[^\d\.-]/g, "")).toFixed(n) + "";
     let l = s.split(".")[0].split("").reverse(), r = s.split(".")[1];
@@ -73,7 +97,7 @@ function fNumber(s, n) {
  * capitalize('fooBar'); // 'FooBar'
  * capitalize('fooBar', true); // 'FooBar'
  */
-const capitalize = ([first, ...rest]) =>
+export const capitalize = ([first, ...rest]) =>
   first.toUpperCase() + rest.join('');
 
 /**
@@ -84,7 +108,7 @@ const capitalize = ([first, ...rest]) =>
  * eg.
  * capitalizeEveryWord('hello world!'); // 'Hello World!'
  */
-const capitalizeEveryWord = str => str.replace(/\b[a-z]/g, char => char.toUpperCase());
+export const capitalizeEveryWord = str => str.replace(/\b[a-z]/g, char => char.toUpperCase());
 
 /**
  * @description 首字母小写
@@ -95,7 +119,7 @@ const capitalizeEveryWord = str => str.replace(/\b[a-z]/g, char => char.toUpperC
  * decapitalize('FooBar'); // 'fooBar'
  * decapitalize('FooBar'); // 'fooBar'
  */
-const decapitalize = ([first, ...rest]) =>
+export const decapitalize = ([first, ...rest]) =>
   first.toLowerCase() + rest.join('')
 
 /**
@@ -106,7 +130,7 @@ const decapitalize = ([first, ...rest]) =>
  * eg.
  * reverseString('foobar'); // 'raboof'
  */
-const reverseString = str => [...str].reverse().join('');
+export const reverseString = str => [...str].reverse().join('');
 
 /**
  * @description 从字符串中删除HTML/XML标签
@@ -116,7 +140,7 @@ const reverseString = str => [...str].reverse().join('');
  * eg.
  * stripHTMLTags('<p><em>lorem</em> <strong>ipsum</strong></p>'); // 'lorem ipsum'
  */
-const stripHTMLTags = str => str.replace(/<[^>]*>/g, '');
+export const stripHTMLTags = str => str.replace(/<[^>]*>/g, '');
 
 /**
  * @description 返回字符串的字节长度
@@ -127,7 +151,7 @@ const stripHTMLTags = str => str.replace(/<[^>]*>/g, '');
  * byteSize('😀'); // 4
  * byteSize('Hello World'); // 11
  */
-const byteSize = str => new Blob([str]).size;
+export const byteSize = str => new Blob([str]).size;
 
 /**
  * @description RGB转十六进制
@@ -138,18 +162,4 @@ const byteSize = str => new Blob([str]).size;
  * eg.
  * rgbToHex(255, 165, 1); // 'ffa501'
  */
-const rgbToHex = (r, g, b) => ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
-
-export default {
-  isNumber,
-  leftPad,
-  fNumberWithComma,
-  fNumber,
-  capitalize,
-  capitalizeEveryWord,
-  decapitalize,
-  reverseString,
-  stripHTMLTags,
-  byteSize,
-  rgbToHex
-}
+export const rgbToHex = (r, g, b) => ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');

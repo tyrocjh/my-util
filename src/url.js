@@ -4,7 +4,7 @@
  * @param  {String} url  查询的URL字符串，如果不传则默认取当前url
  * @return {String}
  */
-function getQueryString(name, url) {
+export const getQueryString = (name, url) => {
     let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i'),
         urls = url || window.location.search,
         r = urls.substr(urls.indexOf('?') + 1).match(reg);
@@ -17,7 +17,7 @@ function getQueryString(name, url) {
  * @param  {String} url  default: window.location.href
  * @return {Object} 
  */
-function parseQueryToObj(url) {
+export const parseQueryToObj = (url) => {
     url = !url ? window.location.href : url;
     if(url.indexOf('?') === -1) {
         return {};
@@ -41,12 +41,6 @@ function parseQueryToObj(url) {
  * eg.
  * httpsRedirect(); // 若在`http://www.baidu.com`, 则跳转到`https://www.baidu.com`
  */
-const httpsRedirect = () => {
+export const httpsRedirect = () => {
   if (location.protocol !== 'https:') location.replace('https://' + location.href.split('//')[1]);
 };
-
-export default {
-    getQueryString,
-    parseQueryToObj,
-    httpsRedirect
-}

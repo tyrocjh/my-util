@@ -3,7 +3,7 @@
  * @param  {String} xx浏览器
  * @return {Boolean}
  */
-function getVersion() {
+export const getVersion = () => {
     var ua = navigator.userAgent,
         app = navigator.appVersion;
     return {
@@ -28,7 +28,7 @@ function getVersion() {
  * @desc   获取浏览器类型和版本
  * @return {String}
  */
-function getExplore() {
+export const getExplore = () => {
     var sys = {},
         ua = navigator.userAgent.toLowerCase(),
         s;
@@ -53,7 +53,7 @@ function getExplore() {
  * @desc   获取操作系统类型
  * @return {String}
  */
-function getOS() {
+export const getOS = () => {
     var userAgent = 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || '';
     var vendor = 'navigator' in window && 'vendor' in navigator && navigator.vendor.toLowerCase() || '';
     var appVersion = 'navigator' in window && 'appVersion' in navigator && navigator.appVersion.toLowerCase() || '';
@@ -64,10 +64,4 @@ function getOS() {
     if (/mac/i.test(appVersion)) return 'MacOSX'
     if (/win/i.test(appVersion)) return 'windows'
     if (/linux/i.test(appVersion)) return 'linux'
-}
-
-export default {
-    getVersion,
-    getExplore,
-    getOS
 }

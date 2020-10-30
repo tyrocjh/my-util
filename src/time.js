@@ -6,7 +6,7 @@
  * eg.
  * dayOfYear(new Date()); // 295
  */
-const dayOfYear = date =>
+export const dayOfYear = date =>
   Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
 /**
@@ -18,7 +18,7 @@ const dayOfYear = date =>
  * eg.
  * getDaysDiffBetweenDates(new Date('2019-01-01'), new Date('2019-10-14')); // 286
  */
-const getDaysDiffBetweenDates = (dateInitial, dateFinal) =>
+export const getDaysDiffBetweenDates = (dateInitial, dateFinal) =>
   (dateFinal - dateInitial) / (1000 * 3600 * 24);
 
 /**
@@ -27,7 +27,7 @@ const getDaysDiffBetweenDates = (dateInitial, dateFinal) =>
  * @param   { Date | String } endTime
  * @returns { Object } { d, h, m, s } 天 时 分 秒
  */
-function timeLeft(startTime, endTime) {
+export const timeLeft = (startTime, endTime) => {
     if (!startTime || !endTime) {
         return
     }
@@ -61,7 +61,7 @@ function timeLeft(startTime, endTime) {
  * @param  {Date} startTime 
  * @return {String}
  */
-function formatPassTime(startTime) {
+export const formatPassTime = (startTime) => {
     var currentTime = Date.parse(new Date()),
         time = currentTime - startTime,
         day = parseInt(time / (1000 * 60 * 60 * 24)),
@@ -82,7 +82,7 @@ function formatPassTime(startTime) {
  * @param  {Date} endTime  
  * @return {String}
  */
-function formatRemainTime(endTime) {
+export const formatRemainTime = (endTime) => {
     var startDate = new Date(); //开始时间
     var endDate = new Date(endTime); //结束时间
     var t = endDate.getTime() - startDate.getTime(); //时间差
@@ -105,7 +105,7 @@ function formatRemainTime(endTime) {
  * @param  {Date} date2 可选／默认值：当天
  * @return {Boolean}
  */
-function isSameDay(date1, date2) {
+export const isSameDay = (date1, date2) => {
     if (!date2) {
         date2 = new Date();
     }
@@ -124,19 +124,9 @@ function isSameDay(date1, date2) {
  * @param   {Number} year
  * @returns {Boolean}
  */
-function isLeapYear(year) {
+export const isLeapYear = (year) => {
   if (0 === year % 4 && (year % 100 !== 0 || year % 400 === 0)) {
     return true
   }
   return false;
-}
-
-export default {
-    dayOfYear,
-    getDaysDiffBetweenDates,
-    timeLeft,
-    formatPassTime,
-    formatRemainTime,
-    isSameDay,
-    isLeapYear
 }

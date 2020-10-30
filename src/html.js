@@ -2,7 +2,7 @@
  * @desc   html encode（防止xss）
  * @return {String} 
  */
-function htmlEncode(html) {
+export const htmlEncode = (html) => {
     var temp = document.createElement ("div");
     (temp.textContent != undefined ) ? (temp.textContent = html) : (temp.innerText = html);
     var output = temp.innerHTML;
@@ -14,7 +14,7 @@ function htmlEncode(html) {
  * @desc   html decode（防止xss）
  * @return {String} 
  */
-function htmlDecode(text) {
+export const htmlDecode = (text) => {
     var temp = document.createElement("div");
     temp.innerHTML = text;
     var output = temp.innerText || temp.textContent;
@@ -26,7 +26,7 @@ function htmlDecode(text) {
  * @desc   html encode（防止xss）
  * @return {String} 
  */
-function htmlEncodeByRegExp(str) {
+export const htmlEncodeByRegExp = (str) => {
     var s = "";
     if(str.length == 0) return "";
     s = str.replace(/&/g,"&amp;");
@@ -42,7 +42,7 @@ function htmlEncodeByRegExp(str) {
  * @desc   html decode（防止xss）
  * @return {String} 
  */
-function htmlDecodeByRegExp(str) {
+export const htmlDecodeByRegExp = (str) => {
     var s = "";
     if(str.length == 0) return "";
     s = str.replace(/&amp;/g,"&");
@@ -52,11 +52,4 @@ function htmlDecodeByRegExp(str) {
     s = s.replace(/&#39;/g,"\'");
     s = s.replace(/&quot;/g,"\"");
     return s;
-}
-
-export default {
-    htmlEncode,
-    htmlDecode,
-    htmlEncodeByRegExp,
-    htmlDecodeByRegExp
 }

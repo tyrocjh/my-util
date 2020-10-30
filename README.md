@@ -10,7 +10,10 @@
 
 ### [regex][regex]
 #### &emsp;&emsp; isEmail &emsp;&emsp;判断是否为邮箱地址
+#### &emsp;&emsp; isLetter &emsp;&emsp;是否是英文字母
+#### &emsp;&emsp; isChinese &emsp;&emsp;是否是中文
 #### &emsp;&emsp; isPhoneNum &emsp;&emsp;判断是否为手机号
+#### &emsp;&emsp; isLandline &emsp;&emsp;是否固定电话
 #### &emsp;&emsp; isIdCard &emsp;&emsp;判断是否为身份证号
 #### &emsp;&emsp; isUrl &emsp;&emsp;判断是否为URL地址
 #### &emsp;&emsp; isValidPwd &emsp;&emsp;判断密码格式是否6-25字符必须包含大小写字母+数字
@@ -36,6 +39,7 @@
 #### &emsp;&emsp; isLeapYear &emsp;&emsp;是否为闰年
 
 ### [str][str]
+#### &emsp;&emsp; trim &emsp;&emsp;去空格
 #### &emsp;&emsp; isNumber &emsp;&emsp;判断是否数字
 #### &emsp;&emsp; leftPad &emsp;&emsp;补零
 #### &emsp;&emsp; fNumberWithComma &emsp;&emsp;数字每隔三位加一个逗号
@@ -83,6 +87,7 @@
 #### &emsp;&emsp; windowResize &emsp;&emsp;H5软键盘缩回、弹起回调
 
 ### [object][object]
+#### &emsp;&emsp; isObject &emsp;&emsp;判断是否对象
 #### &emsp;&emsp; mergeObject &emsp;&emsp;合并对象
 #### &emsp;&emsp; equals &emsp;&emsp;全等判断
 #### &emsp;&emsp; isEmptyObject &emsp;&emsp;判断obj是否为空

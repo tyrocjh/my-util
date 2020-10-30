@@ -2,11 +2,11 @@
   "name": "tyro-util",
   "version": "2.1.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/util.js",
   "scripts": {
     "build": "webpack"
   },
-  "author": "",
+  "author": "Tyro",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.2",

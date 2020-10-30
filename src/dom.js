@@ -7,7 +7,7 @@
  * eg.
  * hasClass(document.querySelector('p.special'), 'special'); // true
  */
-const hasClass = (el, className) => el.classList.contains(className);
+export const hasClass = (el, className) => el.classList.contains(className);
 
 /**
  * @desc  检查是否包含子元素
@@ -17,7 +17,7 @@ const hasClass = (el, className) => el.classList.contains(className);
  * elementContains(document.querySelector('head'), document.querySelector('title')); // true
  * elementContains(document.querySelector('body'), document.querySelector('body')); // false
  */
-const elementContains = (parent, child) => parent !== child && parent.contains(child);
+export const elementContains = (parent, child) => parent !== child && parent.contains(child);
 
 /**
  * @desc  检查页面底部是否可见
@@ -26,7 +26,7 @@ const elementContains = (parent, child) => parent !== child && parent.contains(c
  * eg.
  * bottomVisible(); // true
  */
-const bottomVisible = () =>
+export const bottomVisible = () =>
   document.documentElement.clientHeight + window.scrollY >=
   (document.documentElement.scrollHeight || document.documentElement.clientHeight);
 
@@ -38,7 +38,7 @@ const bottomVisible = () =>
  * let rect = getRect(demo)
  * console.log(rect)
  */
-function getRect(element) {
+export const getRect = (element) => {
   const rect = element.getBoundingClientRect(),
     top = document.documentElement.clientTop,
     left = document.documentElement.clientLeft
@@ -58,7 +58,7 @@ function getRect(element) {
  * @param   {HTMLElement} ele 
  * @returns { {left: number, top: number} }
  */
-function offset(ele) {
+export const offset = (ele) => {
     var pos = {
         left: 0,
         top: 0
@@ -74,7 +74,7 @@ function offset(ele) {
 /**
  * @desc 获取滚动条距顶部的距离
  */
-function getScrollTop() {
+export const getScrollTop = () => {
     return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 }
 
@@ -82,11 +82,16 @@ function getScrollTop() {
  * @desc  设置滚动条距顶部的距离
  * @param {Number} value
  */
-function setScrollTop(value) {
+export const setScrollTop = (value) => {
     window.scrollTo(0, value);
     return value;
 }
 
+/**
+ * @desc  在${duration}时间内，滚动条平滑滚动到${to}指定位置
+ * @param {Number} to 
+ * @param {Number} duration 
+ */
 var requestAnimFrame = (function () {
     return window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
@@ -95,13 +100,7 @@ var requestAnimFrame = (function () {
             window.setTimeout(callback, 1000 / 60);
         };
 })();
-
-/**
- * @desc  在${duration}时间内，滚动条平滑滚动到${to}指定位置
- * @param {Number} to 
- * @param {Number} duration 
- */
-function scrollTo(to, duration) {
+export const scrollTo = (to, duration) => {
     if (duration < 0) {
         setScrollTop(to);
         return
@@ -129,7 +128,7 @@ function scrollTo(to, duration) {
  * @param {Function} downCb 当软键盘弹起后，缩回的回调
  * @param {Function} upCb 当软键盘弹起的回调
  */
-function windowResize(downCb, upCb) {
+export const windowResize = (downCb, upCb) => {
     var clientHeight = window.innerHeight;
     downCb = typeof downCb === 'function' ? downCb : function () {}
     upCb = typeof upCb === 'function' ? upCb : function () {}
@@ -142,16 +141,4 @@ function windowResize(downCb, upCb) {
             upCb();
         }
     });
-}
-
-export default {
-    hasClass,
-    elementContains,
-    bottomVisible,
-    getRect,
-    offset,
-    getScrollTop,
-    setScrollTop,
-    scrollTo,
-    windowResize
 }

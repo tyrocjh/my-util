@@ -14,7 +14,7 @@
  *
  * @return {Function}  新的节流函数
  */
-function throttle(delay, noTrailing, callback, debounceMode) {
+export const throttle = (delay, noTrailing, callback, debounceMode) => {
 
     // After wrapper has stopped being called, this timeout ensures that
     // `callback` is executed at the proper times in `throttle` and `end`
@@ -99,7 +99,7 @@ function throttle(delay, noTrailing, callback, debounceMode) {
  *
  * @return {Function} 新的防抖函数。
  */
-function debounce(delay, atBegin, callback) {
+export const debounce = (delay, atBegin, callback) => {
     return callback === undefined ? throttle(delay, atBegin, false) : throttle(delay, callback, atBegin !== false);
 };
 
@@ -108,7 +108,7 @@ function debounce(delay, atBegin, callback) {
  * @param {Function} fn
  * @return {Function}
  */
-const once = fn => {
+export const once = fn => {
   let called = false
   return function () {
     if (!called) {
@@ -126,16 +126,9 @@ const once = fn => {
  * eg.
  * timeTaken(() => Math.pow(2, 10)); // 1024, (logged): timeTaken: 0.02099609375ms
  */
-const timeTaken = callback => {
+export const timeTaken = callback => {
   console.time('timeTaken');
   const r = callback();
   console.timeEnd('timeTaken');
   return r;
 };
-
-export default {
-    throttle,
-    debounce,
-    once,
-    timeTaken
-}

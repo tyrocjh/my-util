@@ -3,8 +3,26 @@
  * @param  {String}  str
  * @return {Boolean} 
  */
-function isEmail(str) {
+export const isEmail = (str) => {
     return /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(str);
+}
+
+/**
+ * @desc 是否是英文字母
+ * @param { str } str
+ * @return {Boolean}
+ */
+export const isLetter = (str) => {
+    return /^[a-zA-Z]*$/.test(str);
+}
+
+/**
+ * @desc 是否是中文
+ * @param { str } str
+ * @return {Boolean}
+ */
+export const isChinese = (value) => {
+    return /^[\u4e00-\u9fa5]+$/gi.test(value);
 }
 
 /**
@@ -12,8 +30,17 @@ function isEmail(str) {
  * @param  {String|Number} str 
  * @return {Boolean} 
  */
-function isPhoneNum(str) {
+export const isPhoneNum = (str) => {
     return /^(13[0-9]|14[0-9]|15[0-9]|16[0-9]|18[0-9]|19[0-9]|17[0-9])([0-9]{8})$/.test(str);
+}
+
+/**
+ * @desc 是否固定电话
+ * @param { String } str
+ * @return {Boolean}
+ */
+export const isLandline = (str) => {
+    return /^\d{3,4}-\d{7,8}(-\d{3,4})?$/.test(str);
 }
 
 /**
@@ -21,7 +48,7 @@ function isPhoneNum(str) {
  * @param  {String|Number} str 
  * @return {Boolean}
  */
-function isIdCard(str) {
+export const isIdCard = (str) => {
     return /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(str);
 }
 
@@ -30,7 +57,7 @@ function isIdCard(str) {
  * @param  {String} str 
  * @return {Boolean}
  */
-function isUrl(str) {
+export const isUrl = (str) => {
     return /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(str);
 }
 
@@ -39,7 +66,7 @@ function isUrl(str) {
  * @param  {String}  str
  * @return {Boolean} 
  */
-function isValidPwd(str) {
+export const isValidPwd = (str) => {
     return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^]{6,25}$/.test(str);
 }
 
@@ -48,7 +75,7 @@ function isValidPwd(str) {
  * @param  {String}  str
  * @return {Boolean} 
  */
-function isColor(str) {
+export const isColor = (str) => {
 	return /^(#([0-9a-fA-F]{3}){1,2}|[rR][gG][Bb](\((\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*,){2}\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*\)|[Aa]\((\s*(2[0-4]\d|25[0-5]|[01]?\d{1,2})\s*,){3}\s*([01]|0\.\d+)\s*\)))$/.test(str);
 }
 
@@ -57,7 +84,7 @@ function isColor(str) {
  * @param {string} str - 参数str
  * @return { string } - 替换后的字符
  */
-function filterNum(str){
+export const filterNum = (str) => {
     if(str){
         str = str.replace(/[^\d]/g,"");
         return str;
@@ -70,7 +97,7 @@ function filterNum(str){
  * @param { string } str - 参数str
  * @return { string } - 替换后的字符
  */
-function filterCENum(str) {
+export const filterCENum = (str) => {
     if(str){
         str = str.replace(/[^a-zA-Z\d\u4e00-\u9fa5]/g,"");
         return str;
@@ -83,7 +110,7 @@ function filterCENum(str) {
  * @param {string} str - 参数str
  * @return { string } - 替换后的字符
  */
-function filterENum(str){
+export const filterENum = (str) => {
     if(str){
         str = str.replace(/[^a-zA-Z\d]/g,"");
         return str;
@@ -96,7 +123,7 @@ function filterENum(str){
  * @param { string } str - 参数str
  * @return { string } - 替换后的字符
  */
-function filterFloate(str){
+export const filterFloate = (str) => {
     if(str){
         str = str.replace(/[^\d.]/g,"");
         str = str.replace(/(\.\d*)(\.\d*)/g,"$1");
@@ -112,7 +139,7 @@ function filterFloate(str){
  * eg.
  * escapeHTML('<a href="#">Me & you</a>'); // '&lt;a href=&quot;#&quot;&gt;Me &amp; you&lt;/a&gt;'
  */
-const escapeHTML = str =>
+export const escapeHTML = (str) =>
   str.replace(
     /[&<>'"]/g,
     tag =>
@@ -124,17 +151,3 @@ const escapeHTML = str =>
         '"': '&quot;'
       }[tag] || tag)
   );
-
-export default {
-    isEmail,
-    isPhoneNum,
-    isIdCard,
-    isUrl,
-    isValidPwd,
-    isColor,
-    filterNum,
-    filterCENum,
-    filterENum,
-    filterFloate,
-    escapeHTML
-}

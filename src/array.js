@@ -3,7 +3,7 @@
 * @param {Array} arr 需要去重的数组
 * @return {Array}
 * */
-const unique = (arr) => {
+export const unique = (arr) => {
   let set = new Set(arr);
   return Array.from(set);
 }
@@ -13,7 +13,7 @@ const unique = (arr) => {
 * @param {Array} arr 需要扁平化的数组
 * @return {Array}
 * */
-const steamroller = (arr) => {
+export const steamroller = (arr) => {
   while(arr.some(item => Array.isArray(item))) {
     arr = [].concat(...arr)
   }
@@ -26,7 +26,7 @@ const steamroller = (arr) => {
 * @param {String} pid 父级id
 * @return {Object}
 * */
-function toTreeData(data, pid) {
+export function toTreeData(data, pid) {
   function tree(id) {
     let arr = [];
     data.filter(item => {
@@ -50,7 +50,7 @@ function toTreeData(data, pid) {
  * @param {Array} arr2
  * @return {Boolean}
  */
-const arrayEqual = (arr1, arr2) => {
+export const arrayEqual = (arr1, arr2) => {
     if (arr1 === arr2) return true;
     if (arr1.length != arr2.length) return false;
     for (var i = 0; i < arr1.length; ++i) {
@@ -67,7 +67,7 @@ const arrayEqual = (arr1, arr2) => {
  * eg.
  * sample([3, 7, 9, 11]); // 9
  */
-const sample = arr => arr[Math.floor(Math.random() * arr.length)];
+export const sample = arr => arr[Math.floor(Math.random() * arr.length)];
 
 /**
  * @description 数组“洗牌”(Fisher-Yates算法随机排序数组的元素)
@@ -78,7 +78,7 @@ const sample = arr => arr[Math.floor(Math.random() * arr.length)];
  * const foo = [1, 2, 3];
  * shuffle(foo); // [2, 3, 1], foo = [1, 2, 3]
  */
-const shuffle = ([...arr]) => {
+export const shuffle = ([...arr]) => {
   let m = arr.length;
   while (m) {
     const i = Math.floor(Math.random() * m--);
@@ -96,7 +96,7 @@ const shuffle = ([...arr]) => {
  * eg.
  * countOccurrences([1, 1, 2, 1, 2, 3], 1); // 3
  */
-const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+export const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 
 /**
  * @description 检查数组各项是否相等
@@ -107,7 +107,7 @@ const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 :
  * allEqual([1, 2, 3, 4, 5, 6]); // false
  * allEqual([1, 1, 1, 1]); // true
  */
-const allEqual = arr => arr.every(val => val === arr[0]);
+export const allEqual = arr => arr.every(val => val === arr[0]);
 
 /**
  * @description 取平均数
@@ -118,7 +118,7 @@ const allEqual = arr => arr.every(val => val === arr[0]);
  * average(...[1, 2, 3]); // 2
  * average(1, 2, 3); // 2
  */
-const average = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.length;
+export const average = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.length;
 
 /**
  * @description 数组总和
@@ -128,7 +128,7 @@ const average = (...nums) => nums.reduce((acc, val) => acc + val, 0) / nums.leng
  * eg.
  * sum([1,2,3,4]); // 10
  */
-const sum = arr => arr.reduce((acc, val) => acc + val, 0);
+export const sum = arr => arr.reduce((acc, val) => acc + val, 0);
 
 /**
  * @description 两数组的交集
@@ -139,21 +139,7 @@ const sum = arr => arr.reduce((acc, val) => acc + val, 0);
  * eg.
  * intersection([1, 2, 3], [4, 3, 2]); // [2, 3]
  */
-const intersection = (a, b) => {
+export const intersection = (a, b) => {
   const s = new Set(b);
   return a.filter(x => s.has(x));
 };
-
-export default {
-  unique,
-  steamroller,
-  toTreeData,
-	arrayEqual,
-	sample,
-	shuffle,
-	countOccurrences,
-	allEqual,
-	average,
-  sum,
-	intersection
-}

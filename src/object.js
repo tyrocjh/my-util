@@ -1,4 +1,9 @@
-function isObject(value) {
+/**
+ * @desc 判断是否对象
+ * @param value 对象
+ * @returns {}
+ */
+export const isObject = (value) => {
   const type = typeof value
   return value !== null && (type === 'object' || type === 'function')
 }
@@ -9,7 +14,7 @@ function isObject(value) {
  * @param other 额外对象
  * @returns {*}
  */
-function mergeObject(source, other) {
+export const mergeObject = (source, other) => {
   if (!isObject(source) || !isObject(other)) {
     return other === undefined ? source : other
   }
@@ -31,7 +36,7 @@ function mergeObject(source, other) {
  * eg.
  * equals({ a: [2, { e: 3 }], b: [4], c: 'foo' }, { a: [2, { e: 3 }], b: [4], c: 'foo' }); // true
  */
-const equals = (a, b) => {
+export const equals = (a, b) => {
     if (a === b) return true;
     if (a instanceof Date && b instanceof Date) return a.getTime() === b.getTime();
     if (!a || !b || (typeof a !== 'object' && typeof b !== 'object')) return a === b;
@@ -46,7 +51,7 @@ const equals = (a, b) => {
  * @param  {Object} obj
  * @return {Boolean}
  */
-function isEmptyObject(obj) {
+export const isEmptyObject = (obj) => {
     if (!obj || typeof obj !== 'object' || Array.isArray(obj))
         return false
     return !Object.keys(obj).length
@@ -57,7 +62,7 @@ function isEmptyObject(obj) {
  * @param  {Any} values
  * @return {Any}
  */
-function deepClone(values) {
+export const deepClone = (values) => {
     var copy;
 
     // Handle the 3 simple types, and null or undefined
@@ -89,11 +94,4 @@ function deepClone(values) {
     }
 
     throw new Error("Unable to copy values! Its type isn't supported.");
-}
-
-export default {
-    mergeObject,
-    equals,
-    isEmptyObject,
-    deepClone
 }
