@@ -137,8 +137,9 @@ npm publish // 发布
 ```
 <script type="text/javascript" src="util.js"></script>
 
-tUtil.array
-tUtil.cookie
+tUtil.uuid()
+tUtil.trim(' Tyro CCC ')
+tUtil.getExplore()
 ```
 
 ### NODE：
@@ -146,16 +147,25 @@ tUtil.cookie
 1. 使用npm安装:
 
 ```
-npm install tyro-util --save-dev
+npm install tyro-util --save
 ```
 
 2. import工具类：
 
 ```
+// 全部引入
 import tUtil from 'tyro-util'
 
-tUtil.array
-tUtil.array
+tUtil.uuid()
+tUtil.getExplore()
+```
+
+```
+// 按需引入
+import { uuid, getExplore } from 'tyro-util'
+
+uuid()
+getExplore()
 ```
 
 [regex]:https://github.com/tyrocjh/my-util/blob/master/src/regex.js
