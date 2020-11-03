@@ -1,11 +1,12 @@
 {
   "name": "tyro-util",
-  "version": "2.1.0",
-  "description": "",
+  "version": "2.1.1",
+  "description": "前端常用工具库",
   "main": "dist/util.js",
   "scripts": {
     "build": "webpack"
   },
+  "keywords": ["工具", "工具库", "封装"],
   "author": "Tyro",
   "license": "ISC",
   "devDependencies": {
