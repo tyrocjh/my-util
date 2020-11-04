@@ -1,14 +1,19 @@
 {
   "name": "tyro-util",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "前端常用工具库",
   "main": "dist/util.js",
   "scripts": {
     "build": "webpack"
   },
-  "keywords": ["工具", "工具库", "封装"],
+  "homepage": "https://github.com/tyrocjh/my-util",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tyrocjh/my-util.git"
+  },
+  "keywords": ["工具", "工具库", "前端库", "封装"],
   "author": "Tyro",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-transform-runtime": "^7.1.0",
