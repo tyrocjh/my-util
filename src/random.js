@@ -42,6 +42,12 @@ export const randomNumberInRange = (min, max) => Math.random() * (max - min) + m
 export const shuffle = arr => arr.sort(() => Math.random() - 0.5);
 
 /**
+ * @desc   获取随机布尔值 (true/false)
+ * @return {Boolean} 
+ */
+export const randomBoolean = () => Math.random() >= 0.5;
+
+/**
  * @desc   随机生成颜色
  * @return {String} 
  */

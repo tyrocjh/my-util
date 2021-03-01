@@ -65,3 +65,9 @@ export const getOS = () => {
     if (/win/i.test(appVersion)) return 'windows'
     if (/linux/i.test(appVersion)) return 'linux'
 }
+
+/**
+ * @desc   判断浏览器 Tab 窗口是否为活动窗口
+ * @return {Boolean}
+ */
+export const isBrowserTabInView = () => document.hidden;

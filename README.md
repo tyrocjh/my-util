@@ -133,6 +133,7 @@ npm publish // 发布
 #### &emsp;&emsp; setScrollTop &emsp;&emsp;设置滚动条距顶部的距离
 #### &emsp;&emsp; scrollTo &emsp;&emsp;在${duration}时间内，滚动条平滑滚动到${to}指定位置
 #### &emsp;&emsp; windowResize &emsp;&emsp;H5软键盘缩回、弹起回调
+#### &emsp;&emsp; elementIsInFocus &emsp;&emsp;判断 DOM 元素是否已获得焦点
 
 ### [object][object]
 #### &emsp;&emsp; isObject &emsp;&emsp;判断是否对象
@@ -152,12 +153,14 @@ npm publish // 发布
 #### &emsp;&emsp; randomIntegerInRange &emsp;&emsp;生成指定范围的随机整数
 #### &emsp;&emsp; randomNumberInRange &emsp;&emsp;生成指定范围的随机小数
 #### &emsp;&emsp; shuffle &emsp;&emsp;随机化数组的顺序
+#### &emsp;&emsp; randomBoolean &emsp;&emsp;获取随机布尔值 (true/false)
 #### &emsp;&emsp; randomColor &emsp;&emsp;随机生成颜色
 
 ### [device][device]
 #### &emsp;&emsp; getVersion &emsp;&emsp;判断是否xx浏览器
 #### &emsp;&emsp; getExplore &emsp;&emsp;获取浏览器类型和版本
 #### &emsp;&emsp; getOS &emsp;&emsp;获取操作系统类型
+#### &emsp;&emsp; isBrowserTabInView &emsp;&emsp;判断浏览器 Tab 窗口是否为活动窗口
 
 ### [html][html]
 #### &emsp;&emsp; htmlEncode &emsp;&emsp;html转码

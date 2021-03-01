@@ -142,3 +142,12 @@ export const windowResize = (downCb, upCb) => {
         }
     });
 }
+
+/**
+ * @desc 判断 DOM 元素是否已获得焦点
+ * @param {Function} el dom元素
+ */
+export const elementIsInFocus = (el) => {
+    return el === document.activeElement;
+}
+
