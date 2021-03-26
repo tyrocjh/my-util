@@ -87,8 +87,10 @@ npm publish // 发布
 #### &emsp;&emsp; isLeapYear &emsp;&emsp;是否为闰年
 
 ### [str][str]
-#### &emsp;&emsp; trim &emsp;&emsp;去空格
 #### &emsp;&emsp; isNumber &emsp;&emsp;判断是否数字
+#### &emsp;&emsp; isUrl &emsp;&emsp;判断是否是url
+#### &emsp;&emsp; isEmoji &emsp;&emsp;判断是否是emoji
+#### &emsp;&emsp; trim &emsp;&emsp;去空格
 #### &emsp;&emsp; leftPad &emsp;&emsp;补零
 #### &emsp;&emsp; fNumberWithComma &emsp;&emsp;数字每隔三位加一个逗号
 #### &emsp;&emsp; fNumber &emsp;&emsp;保留小数点后n位
@@ -99,6 +101,8 @@ npm publish // 发布
 #### &emsp;&emsp; stripHTMLTags &emsp;&emsp;从字符串中删除HTML/XML标签
 #### &emsp;&emsp; byteSize &emsp;&emsp;返回字符串的字节长度
 #### &emsp;&emsp; rgbToHex &emsp;&emsp;RGB转十六进制
+#### &emsp;&emsp; toCamelCase &emsp;&emsp;连字符转驼峰
+#### &emsp;&emsp; fromCamelCase &emsp;&emsp;驼峰转连字符
 
 ### [array][array]
 #### &emsp;&emsp; unique &emsp;&emsp;数组去重

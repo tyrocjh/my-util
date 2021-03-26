@@ -1,4 +1,37 @@
 /**
+ * @description 判断是否数字
+ *              使用!isNaN和parseFloat()来检查参数是否是一个数字，使用isFinite()来检查数字是否是有限的
+ * @param {String} n
+ * @return {Boolean}
+ *
+ * eg.
+ * isNumber('10'); // true
+ */
+export const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n) && Number(n) == n;
+
+/**
+ * @desc   判断是否是url
+ * @param  {String} str 字符串
+ * @return {Boolean}
+ *
+ * eg.
+ * isUrl('https://www.baidu.com') // true
+ * isUrl('https://www') // false
+ */
+export const isUrl = str => /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?$/.test(str);
+
+/**
+ * @desc   判断是否是emoji
+ * @param  {String} str 字符串
+ * @return {Boolean}
+ *
+ * eg.
+ * isEmoji('🌏') // true
+ * isEmoji('earth') // false
+ */
+export const isEmoji = str => /(\ud83c[\udf00-\udfff])|(\ud83d[\udc00-\ude4f\ude80-\udeff])|[\u2600-\u2B55]/g.test(str);
+
+/**
  * @desc 去空格
  * @param { string } str - 需要去掉空格的字符串
  * @param { string } pos - 去掉空格的位置
@@ -21,17 +54,6 @@ export const trim = (str, pos = 'both') => {
         return str;
     }
 }
-
-/**
- * @description 判断是否数字
- *              使用!isNaN和parseFloat()来检查参数是否是一个数字，使用isFinite()来检查数字是否是有限的
- * @param {String} n
- * @return {Boolean}
- *
- * eg.
- * isNumber('10'); // true
- */
-export const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n) && Number(n) == n;
 
 /**
  * @description 补零
@@ -163,3 +185,46 @@ export const byteSize = str => new Blob([str]).size;
  * rgbToHex(255, 165, 1); // 'ffa501'
  */
 export const rgbToHex = (r, g, b) => ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
+
+/**
+ * @description 连字符转驼峰
+ * 
+ * @param {String} str
+ * @param {String} separator
+ * @return {String}
+ *
+ * eg.
+ * toCamelCase('hello-world') // helloWorld
+ */
+export const toCamelCase = (str = '', separator = '-') => {
+    if (typeof str !== 'string') {
+        throw new Error('Argument must be a string')
+    }
+    if (str === '') {
+        return str
+    }
+    const newExp = new RegExp('\\-\(\\w\)', 'g')
+    return str.replace(newExp, (matched, $1) => {
+        return $1.toUpperCase()
+    })
+}
+
+/**
+ * @description 驼峰转连字符
+ * 
+ * @param {String} str
+ * @param {String} separator
+ * @return {String}
+ *
+ * eg.
+ * fromCamelCase('helloWorld') // hello-world
+ */
+export const fromCamelCase = (str = '', separator = '-') => {
+    if (typeof str !== 'string') {
+        throw new Error('Argument must be a string')
+    }
+    if (str === '') {
+        return str
+    }
+    return str.replace(/([A-Z])/g, `${separator}$1`).toLowerCase()
+}
