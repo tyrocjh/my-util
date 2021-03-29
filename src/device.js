@@ -1,4 +1,14 @@
 /**
+ * @desc   判断是PC端还是移动端
+ * @return {String}
+ *
+ * eg.
+ * detectDeviceType(); // "Mobile" or "Desktop"
+ */
+export const detectDeviceType = () => 
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'; 
+
+/**
  * @desc   判断是否xx浏览器
  * @param  {String} xx浏览器
  * @return {Boolean}

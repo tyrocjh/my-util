@@ -138,6 +138,9 @@ npm publish // 发布
 #### &emsp;&emsp; scrollTo &emsp;&emsp;在${duration}时间内，滚动条平滑滚动到${to}指定位置
 #### &emsp;&emsp; windowResize &emsp;&emsp;H5软键盘缩回、弹起回调
 #### &emsp;&emsp; elementIsInFocus &emsp;&emsp;判断 DOM 元素是否已获得焦点
+#### &emsp;&emsp; retSibling &emsp;&emsp;返回元素的第n个兄弟节点
+#### &emsp;&emsp; hasChildren &emsp;&emsp;判断元素有没有子元素
+#### &emsp;&emsp; getStyle &emsp;&emsp;获取任一元素的任意属性
 
 ### [object][object]
 #### &emsp;&emsp; isObject &emsp;&emsp;判断是否对象
@@ -161,6 +164,7 @@ npm publish // 发布
 #### &emsp;&emsp; randomColor &emsp;&emsp;随机生成颜色
 
 ### [device][device]
+#### &emsp;&emsp; detectDeviceType &emsp;&emsp;判断是PC端还是移动端
 #### &emsp;&emsp; getVersion &emsp;&emsp;判断是否xx浏览器
 #### &emsp;&emsp; getExplore &emsp;&emsp;获取浏览器类型和版本
 #### &emsp;&emsp; getOS &emsp;&emsp;获取操作系统类型

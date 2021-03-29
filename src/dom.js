@@ -151,3 +151,52 @@ export const elementIsInFocus = (el) => {
     return el === document.activeElement;
 }
 
+/**
+ * @desc 返回元素的第n个兄弟节点
+ * @param {e} el dom元素
+ * @param {n} 第n个
+ */
+export const retSibling = (e, n) => {
+    while (e && n) {
+        if (n > 0) {
+            if (e.nextElementSibling) {
+                e = e.nextElementSibling;
+            } else {
+                for (e = e.nextSibling; e && e.nodeType !== 1; e = e.nextSibling);
+            }
+            n--;
+        } else {
+            if (e.previousElementSibling) {
+                e = e.previousElementSibling;
+            } else {
+                for (e = e.previousElementSibling; e && e.nodeType !== 1; e = e.previousElementSibling);
+            }
+            n++;
+        }
+    }
+    return e;
+}
+
+/**
+ * @desc 判断元素有没有子元素
+ * @param {e} el dom元素
+ */
+export const hasChildren = (el) => {
+    var children = el.childNodes,
+        len = children.length;
+    for (var i = 0; i < len; i++) {
+        if (children[i].nodeType === 1) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * @desc 获取任一元素的任意属性
+ * @param {elem} el dom元素
+ * @param {prop} prop 属性
+ */
+function getStyle(elem, prop) {
+    return window.getComputedStyle ? window.getComputedStyle(elem, null)[prop] : elem.currentStyle[prop]
+}
