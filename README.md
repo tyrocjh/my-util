@@ -85,6 +85,11 @@ npm publish // 发布
 #### &emsp;&emsp; formatRemainTime &emsp;&emsp;现在距${endTime}的剩余时间
 #### &emsp;&emsp; isSameDay &emsp;&emsp;判断是否为同一天
 #### &emsp;&emsp; isLeapYear &emsp;&emsp;是否为闰年
+#### &emsp;&emsp; isWeekday &emsp;&emsp;检查日期是否为工作日
+
+### [number][number]
+#### &emsp;&emsp; isEven &emsp;&emsp;判读数字是否为偶数
+#### &emsp;&emsp; toFixed &emsp;&emsp;保留小数点（非四舍五入）
 
 ### [str][str]
 #### &emsp;&emsp; isNumber &emsp;&emsp;判断是否数字
@@ -169,6 +174,8 @@ npm publish // 发布
 #### &emsp;&emsp; getExplore &emsp;&emsp;获取浏览器类型和版本
 #### &emsp;&emsp; getOS &emsp;&emsp;获取操作系统类型
 #### &emsp;&emsp; isBrowserTabInView &emsp;&emsp;判断浏览器 Tab 窗口是否为活动窗口
+#### &emsp;&emsp; touchSupported &emsp;&emsp;判断浏览器是否支持触摸事件
+#### &emsp;&emsp; isAppleDevice &emsp;&emsp;判断是否为苹果设备
 
 ### [html][html]
 #### &emsp;&emsp; htmlEncode &emsp;&emsp;html转码
@@ -183,6 +190,7 @@ npm publish // 发布
 [url]:https://github.com/tyrocjh/my-util/blob/master/src/url.js
 [time]:https://github.com/tyrocjh/my-util/blob/master/src/time.js
 [array]:https://github.com/tyrocjh/my-util/blob/master/src/array.js
+[number]:https://github.com/tyrocjh/my-util/blob/master/src/number.js
 [str]:https://github.com/tyrocjh/my-util/blob/master/src/str.js
 [cookie]:https://github.com/tyrocjh/my-util/blob/master/src/cookie.js
 [clazz]:https://github.com/tyrocjh/my-util/blob/master/src/clazz.js

@@ -81,3 +81,17 @@ export const getOS = () => {
  * @return {Boolean}
  */
 export const isBrowserTabInView = () => document.hidden;
+
+/**
+ * @desc   判断浏览器是否支持触摸事件
+ * @return {Boolean}
+ */
+export const touchSupported = () => {
+  ('ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch);
+}
+
+/**
+ * @desc   判断是否为苹果设备
+ * @return {Boolean}
+ */
+export const isAppleDevice = /Mac|iPod|iPhone|iPad/.test(navigator.platform);

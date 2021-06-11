@@ -11,7 +11,12 @@
     "type": "git",
     "url": "https://github.com/tyrocjh/my-util.git"
   },
-  "keywords": ["工具", "工具库", "前端库", "封装"],
+  "keywords": [
+    "工具",
+    "工具库",
+    "前端库",
+    "封装"
+  ],
   "author": "Tyro",
   "license": "MIT",
   "devDependencies": {
