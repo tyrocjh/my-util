@@ -85,7 +85,7 @@ export const isColor = (str) => {
  * @return { string } - 替换后的字符
  */
 export const filterNum = (str) => {
-    if(str){
+    if (str) {
         str = str.replace(/[^\d]/g,"");
         return str;
     }
@@ -98,7 +98,7 @@ export const filterNum = (str) => {
  * @return { string } - 替换后的字符
  */
 export const filterCENum = (str) => {
-    if(str){
+    if (str) {
         str = str.replace(/[^a-zA-Z\d\u4e00-\u9fa5]/g,"");
         return str;
     }
@@ -111,7 +111,7 @@ export const filterCENum = (str) => {
  * @return { string } - 替换后的字符
  */
 export const filterENum = (str) => {
-    if(str){
+    if (str) {
         str = str.replace(/[^a-zA-Z\d]/g,"");
         return str;
     }
@@ -124,7 +124,7 @@ export const filterENum = (str) => {
  * @return { string } - 替换后的字符
  */
 export const filterFloate = (str) => {
-    if(str){
+    if (str) {
         str = str.replace(/[^\d.]/g,"");
         str = str.replace(/(\.\d*)(\.\d*)/g,"$1");
         return str;
@@ -140,14 +140,38 @@ export const filterFloate = (str) => {
  * escapeHTML('<a href="#">Me & you</a>'); // '&lt;a href=&quot;#&quot;&gt;Me &amp; you&lt;/a&gt;'
  */
 export const escapeHTML = (str) =>
-  str.replace(
-    /[&<>'"]/g,
-    tag =>
-      ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        "'": '&#39;',
-        '"': '&quot;'
-      }[tag] || tag)
-  );
+    str.replace(
+        /[&<>'"]/g,
+        tag =>
+        ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        }[tag] || tag)
+    );
+
+/**
+ * @desc   手机号脱敏处理
+ * @param  {String}  str
+ *
+ * eg.
+ * encryptPhone('13725259631'); // '137****9631'
+ */
+export const encryptPhone = (str) => {
+    if (!str) return '';
+    return str.replace(/(\d{3})\d*(\d{4})/, '$1****$2');
+}
+
+/**
+ * @desc   身份证号脱敏处理
+ * @param  {String}  str
+ *
+ * eg.
+ * encryptIdentity('440111199210154512'); // '4401***********4512'
+ */
+export const encryptIdentity = (str) => {
+    if (!str) return '';
+    return str.replace(/(\d{4})\d*(\d{4})/, '$1***********$2');
+}
