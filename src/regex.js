@@ -1,28 +1,19 @@
 /**
+ * @desc   判断是否为身份证号
+ * @param  {String|Number} str 
+ * @return {Boolean}
+ */
+export const isIdCard = (str) => {
+    return /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(str);
+}
+
+/**
  * @desc   判断是否为邮箱地址
  * @param  {String}  str
  * @return {Boolean} 
  */
 export const isEmail = (str) => {
     return /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(str);
-}
-
-/**
- * @desc 是否是英文字母
- * @param { str } str
- * @return {Boolean}
- */
-export const isLetter = (str) => {
-    return /^[a-zA-Z]*$/.test(str);
-}
-
-/**
- * @desc 是否是中文
- * @param { str } str
- * @return {Boolean}
- */
-export const isChinese = (value) => {
-    return /^[\u4e00-\u9fa5]+$/gi.test(value);
 }
 
 /**
@@ -44,21 +35,21 @@ export const isLandline = (str) => {
 }
 
 /**
- * @desc   判断是否为身份证号
- * @param  {String|Number} str 
+ * @desc 是否是英文字母
+ * @param { str } str
  * @return {Boolean}
  */
-export const isIdCard = (str) => {
-    return /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(str);
+export const isLetter = (str) => {
+    return /^[a-zA-Z]*$/.test(str);
 }
 
 /**
- * @desc   判断是否为URL地址
- * @param  {String} str 
+ * @desc 是否是中文
+ * @param { str } str
  * @return {Boolean}
  */
-export const isUrl = (str) => {
-    return /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(str);
+export const isChinese = (value) => {
+    return /^[\u4e00-\u9fa5]+$/gi.test(value);
 }
 
 /**

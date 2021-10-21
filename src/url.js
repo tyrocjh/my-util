@@ -1,4 +1,22 @@
 /**
+ * @desc   判断是否为URL地址
+ * @param  {String} str 
+ * @return {Boolean}
+ */
+export const isUrl = (str) => {
+    return /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(str);
+}
+
+/**
+ * @desc   判断是否为IPv4地址
+ * @param  {String} str 
+ * @return {Boolean}
+ */
+export const isIpv4 = (str) => {
+    return /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(str);
+}
+
+/**
  * @desc   获取url参数值
  * @param  {String} name 参数名
  * @param  {String} url  查询的URL字符串，如果不传则默认取当前url

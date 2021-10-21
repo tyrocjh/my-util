@@ -57,13 +57,12 @@ npm publish // 发布
 ## API文档
 
 ### [regex][regex]
+#### &emsp;&emsp; isIdCard &emsp;&emsp;判断是否为身份证号
 #### &emsp;&emsp; isEmail &emsp;&emsp;判断是否为邮箱地址
-#### &emsp;&emsp; isLetter &emsp;&emsp;是否是英文字母
-#### &emsp;&emsp; isChinese &emsp;&emsp;是否是中文
 #### &emsp;&emsp; isPhoneNum &emsp;&emsp;判断是否为手机号
 #### &emsp;&emsp; isLandline &emsp;&emsp;是否固定电话
-#### &emsp;&emsp; isIdCard &emsp;&emsp;判断是否为身份证号
-#### &emsp;&emsp; isUrl &emsp;&emsp;判断是否为URL地址
+#### &emsp;&emsp; isLetter &emsp;&emsp;是否是英文字母
+#### &emsp;&emsp; isChinese &emsp;&emsp;是否是中文
 #### &emsp;&emsp; isValidPwd &emsp;&emsp;判断密码格式是否6-25字符必须包含大小写字母+数字
 #### &emsp;&emsp; isColor &emsp;&emsp;判断是否为16进制颜色，rgb 或 rgba
 #### &emsp;&emsp; filterNum &emsp;&emsp;只能输入数字, 不符合字符的会替换为空
@@ -73,6 +72,8 @@ npm publish // 发布
 #### &emsp;&emsp; escapeHTML &emsp;&emsp;转义HTML
 
 ### [url][url]
+#### &emsp;&emsp; isUrl &emsp;&emsp;判断是否为URL地址
+#### &emsp;&emsp; isIpv4 &emsp;&emsp;判断是否为IPv4地址
 #### &emsp;&emsp; getQueryString &emsp;&emsp;获取url参数值
 #### &emsp;&emsp; parseQueryToObj &emsp;&emsp;url参数转对象
 #### &emsp;&emsp; httpsRedirect &emsp;&emsp;HTTP跳转HTTPS
@@ -89,6 +90,8 @@ npm publish // 发布
 
 ### [number][number]
 #### &emsp;&emsp; isEven &emsp;&emsp;判读数字是否为偶数
+#### &emsp;&emsp; isInteger &emsp;&emsp;判读数字是否为整数
+#### &emsp;&emsp; isFloat &emsp;&emsp;判读数字是否为小数
 #### &emsp;&emsp; toFixed &emsp;&emsp;保留小数点（非四舍五入）
 
 ### [str][str]

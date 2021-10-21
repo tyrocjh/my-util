@@ -7,7 +7,32 @@
  * isEven(2) // true
  * isEven(3) // false
  */
-export const isEven = num => num % 2 === 0;
+export const isEven = number => number % 2 === 0;
+
+/**
+ * @description 判读数字是否为整数
+ * @param {Number} number
+ * @return {Boolean}
+ *
+ * eg.
+ * isInteger(12) // true
+ * isInteger(12.34) // false
+ */
+export const isInteger = number => {
+	return /^[-+]?\d*$/.test(number);
+}
+
+/**
+ * @description 判读数字是否为小数
+ * @param {Number} number
+ * @return {Boolean}
+ *
+ * eg.
+ * isFloat(12.34) // true
+ */
+export const isFloat = number => {
+	return /^[-\+]?\d+(\.\d+)?$/.test(number);
+}
 
 /**
  * @description 保留小数点（非四舍五入）
