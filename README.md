@@ -89,6 +89,7 @@ npm publish // 发布
 #### &emsp;&emsp; isWeekday &emsp;&emsp;检查日期是否为工作日
 
 ### [number][number]
+#### &emsp;&emsp; isNumber &emsp;&emsp;判读是否为数字
 #### &emsp;&emsp; isEven &emsp;&emsp;判读数字是否为偶数
 #### &emsp;&emsp; isInteger &emsp;&emsp;判读数字是否为整数
 #### &emsp;&emsp; isFloat &emsp;&emsp;判读数字是否为小数
