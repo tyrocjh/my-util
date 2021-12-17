@@ -114,8 +114,6 @@ npm publish // 发布
 #### &emsp;&emsp; fromCamelCase &emsp;&emsp;驼峰转连字符
 
 ### [array][array]
-#### &emsp;&emsp; unique &emsp;&emsp;数组去重
-#### &emsp;&emsp; steamroller &emsp;&emsp;数组扁平化
 #### &emsp;&emsp; toTreeData &emsp;&emsp;递归数组转为树形结构
 #### &emsp;&emsp; arrayEqual &emsp;&emsp;判断两个数组是否相等
 #### &emsp;&emsp; sample &emsp;&emsp;随机获取数组的某个值

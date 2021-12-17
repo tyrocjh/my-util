@@ -1,11 +1,10 @@
 {
   "name": "tyro-util",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "前端常用工具库",
   "main": "dist/util.js",
   "scripts": {
-    "build": "webpack",
-    "build:utils": "cross-env babel src --out-dir lib --ignore src/index.js"
+    "build": "webpack"
   },
   "homepage": "https://github.com/tyrocjh/my-util",
   "repository": {
