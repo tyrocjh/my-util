@@ -4,7 +4,8 @@
   "description": "前端常用工具库",
   "main": "dist/util.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build:utils": "cross-env babel src --out-dir lib --ignore src/index.js"
   },
   "homepage": "https://github.com/tyrocjh/my-util",
   "repository": {

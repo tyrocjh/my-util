@@ -3,6 +3,12 @@
     "@babel/preset-env"
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
+    ["module-resolver", {
+      "root": ["my-util"],
+      "alias": {
+        "my-util/src": "my-util/lib"
+      }
+    }]
   ]
 }

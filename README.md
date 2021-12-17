@@ -39,7 +39,7 @@ tUtil.getExplore()
 ```
 
 ```
-// 按需引入
+// 单个引入
 import { uuid, getExplore } from 'tyro-util'
 
 uuid()
