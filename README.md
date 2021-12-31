@@ -13,7 +13,7 @@
 直接下载项目，引入js文件
 
 ```
-<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript" src="/dist/util.js"></script>
 
 tUtil.uuid()
 tUtil.trim(' Tyro CCC ')
@@ -28,22 +28,36 @@ tUtil.getExplore()
 npm install tyro-util --save
 ```
 
-2. import工具类：
+2. ES6：
 
 ```
 // 全部引入
 import tUtil from 'tyro-util'
-
 tUtil.uuid()
-tUtil.getExplore()
-```
 
-```
 // 单个引入
-import { uuid, getExplore } from 'tyro-util'
-
+import { uuid } from 'tyro-util'
 uuid()
-getExplore()
+
+// 按需加载
+import uuid from 'tyro-util/lib/uuid'
+uuid()
+```
+
+3. Commonjs：
+
+```
+// 全部引入
+const tUtil = require('tyro-util')
+tUtil.uuid()
+
+// 单个引入
+const uuid = require('tyro-util').uuid
+uuid()
+
+// 按需加载
+const uuid = require('tyro-util/lib/uuid')
+uuid()
 ```
 
 ## 发布到 npm

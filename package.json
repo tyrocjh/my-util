@@ -1,10 +1,11 @@
 {
   "name": "tyro-util",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "前端常用工具库",
   "main": "dist/util.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack && npm run copy",
+    "copy": "node script/copy.js"
   },
   "homepage": "https://github.com/tyrocjh/my-util",
   "repository": {
@@ -12,12 +13,11 @@
     "url": "https://github.com/tyrocjh/my-util.git"
   },
   "keywords": [
-    "工具",
     "工具库",
     "前端库",
     "封装"
   ],
-  "author": "Tyro",
+  "author": "TyroCCC",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -25,6 +25,8 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
+    "copy": "^0.3.2",
+    "rimraf": "^3.0.2",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.8.1"
