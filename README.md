@@ -152,6 +152,8 @@ npm publish // 发布
 #### &emsp;&emsp; [uuid][uuid] &emsp;&emsp;UUID生成器
 
 ### regex
+#### &emsp;&emsp; [addCommaToNum][addCommaToNum] &emsp;&emsp;数字加逗号分隔
+#### &emsp;&emsp; [capitalize][capitalize] &emsp;&emsp;首字母大写
 #### &emsp;&emsp; [encryptIdentity][encryptIdentity] &emsp;&emsp;身份证号脱敏处理
 #### &emsp;&emsp; [encryptPhone][encryptPhone] &emsp;&emsp;手机号脱敏处理
 #### &emsp;&emsp; [escapeHTML][escapeHTML] &emsp;&emsp;转义HTML
@@ -273,6 +275,8 @@ npm publish // 发布
 [shuffle]:https://github.com/tyrocjh/my-util/blob/master/src/random/shuffle.js
 [uuid]:https://github.com/tyrocjh/my-util/blob/master/src/random/uuid.js
 
+[addCommaToNum]:https://github.com/tyrocjh/my-util/blob/master/src/regex/addCommaToNum.js
+[capitalize]:https://github.com/tyrocjh/my-util/blob/master/src/regex/capitalize.js
 [encryptIdentity]:https://github.com/tyrocjh/my-util/blob/master/src/regex/encryptIdentity.js
 [encryptPhone]:https://github.com/tyrocjh/my-util/blob/master/src/regex/encryptPhone.js
 [escapeHTML]:https://github.com/tyrocjh/my-util/blob/master/src/regex/escapeHTML.js
