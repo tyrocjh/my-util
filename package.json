@@ -1,6 +1,6 @@
 {
   "name": "tyro-util",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "description": "前端常用工具库",
   "main": "dist/util.js",
   "scripts": {
